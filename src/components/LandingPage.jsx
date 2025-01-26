@@ -32,9 +32,9 @@ const loanCategories = [
 export const LandingPage = () => {
   return (
     <div className="min-h-screen bg-gray-100">
-      <header className="bg-green-600 text-white py-4">
+      <header className="bg-gradient-to-r from-green-500 to-green-700 text-white py-4">
         <div className="container mx-auto px-4">
-          <h1 className="text-3xl font-bold">Saylani Microfinance App</h1>
+          <h1 className="text-3xl font-bold hover:text-green-300 transition-colors duration-300">Saylani Microfinance App</h1>
         </div>
       </header>
       <main className="container mx-auto px-4 py-8">
@@ -42,11 +42,15 @@ export const LandingPage = () => {
           <h2 className="text-2xl font-semibold mb-4">Loan Categories</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {loanCategories.map((category, index) => (
-              <LoanCategory key={index} {...category} />
+              <LoanCategory 
+                key={index} 
+                {...category} 
+                className="p-4 bg-white rounded-lg shadow-md hover:shadow-lg hover:bg-green-100 transition-all duration-300 transform hover:-translate-y-1"
+              />
             ))}
           </div>
         </section>
-        <section>
+        <section className="p-6 bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow duration-300">
           <h2 className="text-2xl font-semibold mb-4">Loan Calculator</h2>
           <LoanCalculator loanCategories={loanCategories} />
         </section>
@@ -54,4 +58,3 @@ export const LandingPage = () => {
     </div>
   )
 }
-

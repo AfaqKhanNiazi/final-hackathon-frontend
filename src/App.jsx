@@ -69,11 +69,12 @@
 // export default App;
 
 import React, { useState } from "react"
-//import { LandingPage } from "./components/LandingPage"
 import { UserRegistration } from "./components/UserRegistration"
 import { LoanApplication } from "./components/LoanApplication"
 import { UserDashboard } from "./components/UserDashboard"
-import { LandingPage } from "./Components/LandingPage"
+import { LandingPage } from "./components/LandingPage"
+// import Navbar from "./components/Navbar"
+
 import "./App.css"
 
 export const App = () => {
